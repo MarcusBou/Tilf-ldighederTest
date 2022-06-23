@@ -34,6 +34,7 @@ namespace TestTilfældigheden
                 sheet[$"A{iterations + 2}"].Value = stopwatch.ElapsedMilliseconds;
                 Console.WriteLine("Time elapsed for secured random: " + stopwatch.Elapsed);
             }
+            sheet.SaveAs("SecureNumbers.xlsx");
         }
 
         public void RandomTest()
@@ -52,6 +53,7 @@ namespace TestTilfældigheden
             }
             stopwatch.Stop();
             Console.WriteLine("Time lapsed for random: " + stopwatch.Elapsed);
+            sheet.SaveAs("RandomNumbers.xlsx");
         }
     }
 }
